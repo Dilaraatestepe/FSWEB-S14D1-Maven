@@ -7,8 +7,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.lang.reflect.Field;
+import java.util.Locale;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
@@ -40,6 +42,7 @@ public class MainTest {
         juniorDeveloper = new JuniorDeveloper(1, "Junior Doe", 45000);
         midDeveloper = new MidDeveloper(1, "Mid Doe", 60000);
         seniorDeveloper = new SeniorDeveloper(1, "Senior Doe", 100000);
+        Locale.setDefault(Locale.ENGLISH);
     }
 
     @DisplayName("Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
